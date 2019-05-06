@@ -1,0 +1,10 @@
+function use_doolittle;
+    A = [2 3 4; 5 3 6; 2 5 3];
+    B = [1 1 1];
+    [L, U] = doolittle(3, A);
+    for i = 1:3, L(i,4) = B(i); end;
+    Y = lowersys(3,L);
+    for i = 1:3, U(i,4) = Y(i); end;
+    X = uppersys(3,U);
+    fprintf('X(1) = %10.6f, X(2) = %10.6f, X(3) = %10.6f\n', X(1), X(2), X(3));
+return;
