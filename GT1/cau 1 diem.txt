@@ -1,0 +1,670 @@
+
+DANG 1 
+1.	syms x
+	limit((9^x)/(factorial(n)),inf)
+2.	syms x
+	limit((1/(x+(-1)^x)),x,inf)
+3.	syms x
+	limit(sqrt(x^2+1)-(x^3+1)^(1/3),x,inf
+4.	syms x
+	limit((2^x+3^x)/(2^x-3^x),n,inf)
+5.	syms x
+	limit((2*x^3+3*x^2-9*log(x))/(3*(log(x))^7-x^3),x,inf)
+6.	syms x
+	syms m;syms m;limit((x^(1/m)-1)/(x^(1/n)-1),x,1)
+7.	syms x
+	limit((sqrt(x)+sqrt(x-1)-1)/sqrt(x^2-1),x,pi/4)
+8.	syms x
+	limit((sqrt(2)-2*cos(x))/(pi-4*x),x,pi/4)
+9.	syms a x; 
+	limit((tan(pi*x)/(2*a))*sin((x-a)/2),x,a)
+10. sym a x;
+f=(log(x)*(1+x))/(log(a)*x)
+limit(f,x,0)
+11.	syms x 
+	limit(((x-1)/(x+2))^(2*x+1),x,inf)
+12. 	syms a x; 
+	limit(x*(a^(1/x)-1),x,inf)
+13.	syms x 
+	limit((2+x)^(1/x),x,0,'left') 
+	limit((2+x)^(1/x),x,0,'right')
+14. syms x;
+Limit((abs(tan(4*x-pi))/(2*x-pi/2),x,pi/4,’right’)
+Limit((abs(tan(4*x-pi))/(2*x-pi/2),x,pi/4,’left ’)
+
+15.  	syms x; 	
+	limit((exp(1/x)+1/x)^x,x)
+16.	syms x 
+	limit((2^x-x^2)/(x-2),x,2) 
+17.	syms x 
+	limit((tan(2*x)-3*asin(4*x))/(sin(5*x)-6*atan(7*x)),x,0)
+18.	syms x 
+	limit((exp(sin(x))+log(1-x)-1)/(asin(x)-sin(x)),x,0)
+19.	syms x 
+	limit((exp(x)+log(1-sin(x))-1)/((8-x^4)^(1/3)-2),x,0)
+20.	syms x 
+	limit(((1+x)^(1/x)-exp(1))/((sin(x))^2+x),x,0).
+21.	syms x 
+	limit((1+x*cos(x)-sqrt(1+2*x))/(log(1+x)-x),x,0)
+22.	syms x 
+	limit(1/cos(log(x))^(1/(cos(x) - 1)).???
+23.	syms x
+	limit(((2*x^2+3)/(2*x^2-1))^(x^2),x,0)
+24.	syms x 
+	limit((2-x/a)^(tan((pi*x)/(2*a))),x,a)
+DANG 2
+1.	syms x; 
+	subs(diff((sqrt(x)-1)*(1/sqrt(x)+1),x,2),x,1)
+2. 	syms x; 
+	subs(diff((sin(x)-cos(x))/(sin(x)+cos(x)),x,3),x,0)
+3. 	syms x; 
+	subs(diff(exp(x/3)*(cos(x/3))^2,x),0)
+4.	syms x; 
+	subs(diff(log(tan(pi/4+x/2)),x,2),x,0)
+5. 	syms x; 
+	subs(diff(sqrt(x+sqrt(x+sqrt(x))),x,1),x,1)
+6.  	syms x; 
+	subs(diff((sin(x))^(asin(x)),x,2),x,1)
+7. 	syms x; 
+	subs(diff(exp(2*x)*sin(3*x),x,3),x,0)
+8. 	syms x; 
+	subs(diff(x^(3*x)*log(x),x,4),x,1)
+9. 	syms x; 
+	subs(diff(2^(sin(x))*cos(sin(x)),x,2),x,0)
+10. 	syms x t;
+	x=t*(t*cos(t)-2*sin(t))
+	y=t*(sin(t)+2*cos(t));
+	y1=diff(x,t)/diff(y,t)
+	subs(y1,t,pi/4)
+11.	syms x t;
+	x=acos(1/sqrt(1+t^2));
+	y=asin(t/sqrt(1+t^2));
+	y1=diff(y,t)/diff(x,t)
+	y2=diff(y1,t)/diff(x,t)
+12. 	syms x t;
+	x=atan(t);
+	y=log(1-t^2);
+	y1=diff(y,t)/diff(x,t);
+	y2=diff(y1,t)/diff(x,t)
+13. 	syms x; 
+	subs(diff(exp(x)/(x^2),x,2),x,1)
+14. 	syms x; 
+	subs(diff((x+sin(x))^x,x,1),x,pi/4)
+15. 	syms x; 
+	subs(diff(log(x^2+sqrt(x^4+1)),x,1),x,0)
+16. 	syms x;
+	subs(diff((2*x+3)*exp(-x),x,1))
+17.	syms x t;
+>> int(exp(-t^2)+t,0,x)
+ 
+ans =
+ 
+x^2/2 + (pi^(1/2)*erf(x))/2
+ 
+>> diff(ans,x,1)
+ 
+ans =
+ 
+x + exp(-x^2)
+ 
+>> subs(ans,x,1)
+ 
+ans =
+ 
+exp(-1) + 1
+18. 	syms t x; 	
+	subs(diff(int(exp(t)/t,1,x),x,log(2)))
+
+DANG 3
+1.	syms x
+	diff((cos(x))^2,x)
+2.	syms x
+	int(x^2+x-2,x)
+3.	syms  x
+	int(atan(x),x)
+4.	syms  x
+	int(x^2*exp(-x),x)
+5.	syms x
+	int(log(x)/x,x)
+6.	syms x
+	int(x*log(x),x,1,2)
+7.	int(x*atan(x),x,0,1)
+8.	int(x*exp(-x),x,0,inf)
+9.	int(x/sqrt(1-x^2),x,0,1)
+10.	syms x a
+	int(1/(a^2+x^2),x,0,a)
+11.KHONG HIEU KET QUA
+	syms a x;
+	int((1/(a^2+x^2)),x,0,inf)
+12. 	syms x
+	int(exp(-x^2),x,0,inf)
+13.	int(sin(x)/x,x,0,pi/2)
+14.khong ra
+15.	int(x*exp(-x),x,inf,0)
+DANG 4
+1.	plot([1 2 -1 1],[1 3 2 1])
+2.	syms x;
+	x=linspace(-1,2,30);
+	y=exp(x);
+	x1=linspace(2,-1,30);
+	y1=0*x1;
+	plot([x x1],[y y1])
+3.	syms x;
+	x=linspace(0,2*pi,30);
+	y=cos(x);
+	x1=linspace(2*pi,0,30);
+	y1=0*x1;
+	plot([x x1],[y y1])
+4.	syms t
+	t=linspace(0,2*pi,30);
+	x1=1+sin(t);
+	y1=cos(t);
+	x2=sin(t);
+	y2=1+cos(t);
+	plot(x1,y1);
+	hold on
+	plot(x2,y2)
+5.	syms x;
+	x=linspace(1/exp(1),exp(1),30);
+	y=log(x);
+	x1=linspace(exp(1),1/exp(1),30);
+	y1=-1+0*x1;
+	plot([x x1],[y y1])
+6.	syms t
+	t=linspace(0,2*pi,30);
+	x1=1+sin(t);
+	y1=cos(t);
+	x2=sqrt(2)*sin(t);
+	y2=sqrt(2)*cos(t);
+	plot(x1,y1);
+	hold on
+	plot(x2,y2)
+7.	syms y
+	f1=sqrt(y^2-2*y);
+	f2=sqrt(2*y-y^2);
+	f3=y*sqrt(3);
+	gd=double(solve(f1-f3)) 
+	gd=double(solve(f2-f3)) %th?y ra 2 nghi?m-> s? d?ng d? v?)
+	set(ezplot(f2,[gd(1), gd(2)]),'color','r')
+	set(ezplot(f3,[gd(1),gd(2)]),'color','b')
+8.	syms x;
+	x=linspace(0,3,30);
+	y=sinh(x);
+	x1=linspace(3,0,30);
+	y1=0*x1;
+	plot([x x1],[y y1])
+9.	syms t
+	x=linspace(1,3,30);
+	y=3./x;
+	y1=4*ones(1,30)-x;
+	plot(x,y);
+	hold on
+	plot(x,y1)
+10.	syms x t;
+	x=linspace(0,1,30);
+	y=asin(x);
+	y1=pi/2+0*x;
+	hold on
+	plot(x,y);
+	plot(x,y1);
+	set(ezplot(0*t,t,[0 asin(1)]));
+DANG 5
+1.	syms x
+	2*int(abs(sin(x)),x,0,pi)
+2.	syms x
+	int(abs(x^2-3*x),x,0,3)
+3.	syms x
+	int(abs(sqrt(x)/(x^3+1)),x,0,inf)
+4.	syms x
+	f1=2*sqrt(x);
+	f2=-2*sqrt(x);
+	f3=x^2/4;
+	solve(f1-f3) %th?y ra 2 nghi?m-> s? d?ng
+	solve(f2-f3)
+	gd=double(solve(f1-f3));
+	int(abs(2*sqrt(x)-x^2/4),x,gd(1),gd(2))
+5.	syms x
+A = solve(exp(x) - 1 == exp(3*x) - 3)
+isreal(A(1,1)), isreal(A(2,1)),
+isreal(A(3,1))
+int(abs(exp(3*x) - exp(x) - 2), 0, A(1,1))
+
+6.	A = solve(x^2 + y^2 == 1, x^2 + y^2 -2*y ==1)
+A = [A.x A.y]
+int(abs(sqrt(1 - x^2) - sqrt(2 - x^2) - 1),
+A(1,1), A(1,2))
+7.	syms x
+xo = solve(log(x + 2) = 2*log(x))
+int(abs(log(x + 2) - 2*log(x)), 1/exp(1),xo)
+8.	syms x y
+A = solve(x^2 + y^2 == 1, x^2 + y^2 +2*y ==1)
+A = [A.x A.y]
+int(abs(sqrt(1 - x^2) - sqrt(2 - x^2) + 1),
+A(1,1), A(1,2))
+9.	syms x y
+A = solve(x^2 + y^2 == 8, y^2 == 2*x)
+abs(int(abs(y^2/2 - sqrt(8 - y^2)), 2, -2))
+10.	syms x
+	f1=27/(x^2+9);
+	f2=x^2/6;
+	solve(f1-f2) %ra nghi?m là -3 ,3
+	int(abs(f1-f2),x,-3,3)
+DANG 6
+1.	syms x;
+y=x^3/3
+dt=2*pi*int(abs(y)*sqrt(1+(diff(y))^2),x,0,1)
+2.	syms x;
+f=x^2-x;
+a=solve(f);
+dt=double(2*pi*int(abs(f)*sqrt(1+(diff(f))^2),x,a(1,1),a(2,1)))
+3.	syms x; 
+	f=x; 
+	g=5*x+x^2; 
+	h=f-g
+ 	a=solve(h)
+	dientich=2*pi*double(int(abs(f-g)*sqrt(1+(diff(f-g))^2),x,a(1,1),a(2,1)))
+4.	syms x; 
+	y1=x^2/2;
+	y2=sqrt(2*x);
+	f=y1-y2 
+ 	a=solve(f);
+	dientich=abs(int(f,x,a(1,1),a(2,1)))
+5.	syms y; 
+	x=sqrt(4*(1-y^2/9));	
+	a=solve(x)
+	dientich=2*pi*double(int(abs(x)*sqrt(1+(diff(x,y))^2),y,a(2,1),a(1,1)))	
+6.	syms x; 
+	y=sqrt(9*(1-x^2/4)); 
+	a=solve(y); 
+	dientich=2*pi*double(int(abs(y)*sqrt(1+(diff(y))^2),x,a(2,1),a(1,1)))
+7.	syms x; 
+	f=x^2-4; 
+	a=solve(f)
+	dientich=2*pi*double(int(abs(f)*sqrt(1+(diff(x))^2),x,a(2,1),a(1,1)))	
+8.	syms y; 
+	x=sqrt(y); 
+	a=solve(x); 
+	dientich=2*2*pi*int(abs(x)*sqrt(1+(diff(x))^2),y,a,4)
+9.	syms y; 
+	x=4-y^2; 
+	a=solve(x)
+	dientich=2*2*pi*int(abs(x)*sqrt(1+(diff(x,y))^2),y,a(2,1),a(1,1))
+10.	syms x; 
+	y=sqrt(x-4); 
+	a=solve(y) 
+	dientich=2*2*pi*int(abs(y)*sqrt(1+(diff(y))^2),x,0,a)DANG 3.7
+1.	pi*int(1-x^2,x,-1,1)
+2.	2*pi*int(abs(x*(2*x-x^2-3)),x,0,3)
+3.	pi*int((exp(-x)*sin(x))^2,x,0,inf)
+4.	syms x
+	y1=x^2/2;
+	y2=(3-2*x)/2;
+	double(solve(y1-y2))
+	pi*int(abs(y1^2-y2^2),x,-3,1)
+5.	2*pi*int(x*(sin(x))^2,x,0,pi)
+6.	2*pi*int(abs(x*(x^2/2-2*x)),x,-4,0)
+7.   	syms x;
+f=exp(-x)+1
+g=exp(-2*x)-1
+a=solve(-exp(-2*x)+exp(-x)+2)
+tt=abs(pi*int(f-g,x,0,a(2,1)))
+	can  than vi khi giai Phuong trinh ta dc 1 nghiem phuc nen loai ko tinh nghiem phuc do
+
+8.	2*pi*int(abs(x*(((x^2+1))^2+5)),x,-2,2)
+DANG .8
+1.   	 syms x;
+f=x^(3/2)
+a=diff(f)
+l=double(int(sqrt(1-a^2),x,0,4))
+2.	syms x; 
+	y=log(cos(x)); 
+	a=diff(y) 
+	b=sqrt(1-a^2); 
+	L=int(b,x,0,pi/4)
+3.	syms x; 
+	y=x^2; 
+	a=diff(y);
+	b=sqrt(1-a^2); 
+	L=int(y,x,0,1)
+4. 
+5.	syms x;
+	y=sqrt(2-x^2); 
+	L=int(y,x,0,sqrt(2)) %vi x^2=2-y^2,nen 0<=x<sqrt(2)
+DANG 9
+1.	dsolve('y-x*Dy=y*ln(x/y)','x')
+2.	dsolve('(1-x)*(Dy+y)=exp(-x)','y(2)=1','x')
+3.	dsolve('Dy-y*cotx=sinx','x')
+4.	dsolve('Dy-y*tanx+y^2*cosx=0','x')
+5.	dsolve('(1+x^2)*Dy-2*x*y=(1+x^2)^2','x')
+6.	dsolve('Dy=(2*x-y+1)/(x-2*y+1)','x')
+7.	dsolve('Dy-y*cotx=sinx','x')	
+8. 	dsolve('(x^2+1)*Dy+4*x*y=3','x')
+9. 	dsolve('Dy+3*y/x=2/(x^3)','x')
+10. 	dsolve('x^3*Dy=y*(x^2+y^2)','x')
+11.BI LOI
+	dsolve('y*Dx+cotx*Dy=0','y(pi/3)=-1','x')
+12.  	dsolve('Dy+y/(x+1)+y^2=0','x')
+13. 	dsolve('x*Dy-y=(x^2+y^2)^(1/2)','x')
+14.BI LOI
+ 	dsolve('((x*y)^(1/2)+x^(1/2))*Dy-y=0','x')
+15.  	dsolve('x*Dy+y=(y^2)*lnx','y(1)=1','x')
+16. 	dsolve('D2y+2*Dy=3*x','x')
+17. 	dsolve('D2y-3*Dy+2*y=3*exp(2*x)','x')
+18. 	dsolve('D2y+2*Dy+5*y=x+cosx','x')
+19.  	dsolve('D2y+Dy+4*y=(sinx)^2','x')
+20.  	dsolve('5*D2y-6*Dy+5*y=x*exp(x)','x')
+
+DANG 4.1
+1.	syms x a
+	limit(x+1,x,1,'left')
+	subs(x+1,1)
+	limit(3-a*x^2,x,1,'right')
+	a=solve('3-a=2')
+	x=linspace(-3,1);
+	plot(x,x+1);
+	hold on
+	x1=linspace(1,4);
+	plot(x1,3-x1.^2);
+	plot(1,2,'*');
+2.	syms x a
+	limit(x-1,x,1,'left')
+	subs(x-1,1)
+	limit(a*x^2-2,x,1,'right')
+	a=solve('a-2=0')
+	x=linspace(-20,1);
+	x1=linspace(1,30);
+	plot(x,x-1);hold on
+	plot(x1,2*x1.^2-2)
+	plot(1,0,'*')
+3.	syms x a b;
+	subs(a*x+1,pi/2)
+	limit(a*x+1,x,pi/2,'left')
+	limit(sin(x)+b,x,pi/2,'right')
+	solve('(pi*a)/2+1=b+1')
+	b=ans
+	subs(b,1)
+	x=linspace(-20,pi/2);
+	x1=linspace(pi/2,20);
+	plot(x,x+1);
+	hold on
+	plot(x1,sin(x1)+1.5708)
+	plot(pi/2,pi/2+1,'*');
+4.	syms x a;
+	subs(a,0)
+	limit(x*atan(1/x),x,0,'left')
+	limit(x*atan(1/x),x,0,'right')
+	ezplot(x*atan(1/x),[-20,20]);hold on
+	plot(0,0,'*');
+5.	syms x a b;
+	subs(a-x^2,0)
+	limit(a-x^2,x,0,'left')
+	limit(b/(x+1),x,0,'right')
+	subs(b,1)
+	ezplot(1-x^2,[-10,0]);hold on
+	ezplot(1/(x+1),[0,10])
+	plot(0,1,'*')
+ 6,7,8 VIET THEM LENH, F(X0) KHONG  XAC DINH,HAM KHONG LIEN TUC
+6.	syms x a;
+	subs(1/(x+exp(1/(x-3))),3)
+	limit(1/(x+exp(1/(x-3))),x,3,'right')
+	limit(x^2+a*x,x,3,'left')
+	a=solve('3*a+9=0')
+	ezplot(1/(x+exp(1/(x-3))),[3,10]); hold on
+	ezplot(x^2+a*x,[-10,3]);
+	plot(3,0,'*')
+7.	syms x a;
+	subs(1/(2^(1/(x-1))+1),1)
+	limit(1/(2^(1/(x-1))+1),x,1,'right')
+	limit(a*x^2+1,x,1,'left')
+	a=solve('a+1=0')
+	ezplot(1/(2^(1/(x-1))+1),[1,5])	
+	hold on
+	ezplot(a*x^2+1,[-6,1]);
+	plot(1,0,'*');
+8.	syms x a;
+	subs(1/(2^(1/(x-1))+1),1)
+	limit(1/(2^(1/(x-1))+1),x,1,'right')
+	limit(a*x^2+1,x,1,'left')
+	a=solve('a+1=0')
+	ezplot(1/(2^(1/(x-1))+1),[1,5])
+	hold on
+	ezplot(a*x^2+1,[-6,1]);
+	plot(1,0,'*');
+DANG 4.3 
+	1. 	syms x
+	limit((exp(x)-1)/x,x,0,'right')
+	limit(x/2+1,x,0,'left')
+	hold all
+	ezplot((exp(x)-1)/x,[0,1])
+	ezplot(x/2+1,[-1,0])
+	ezplot(diff(x/2+1)*(x-0)+1,[-1,1]) %TIEP TUYEN
+
+2.	syms x
+	limit(x,x,1,'left')
+	limit(x^2-x,x,1,'right')
+	hold all
+	ezplot(x,[0,1])
+	ezplot(x^2-x,[1,2]) %TIEP TUYEN
+
+3. 	syms x
+	limit(exp(1/x)/x,x,0,'left')
+	limit(x^2,x,0,'right')
+	hold all
+	ezplot(exp(1/x)/x,[-1,0])
+ 	ezplot(x^2,[0,1]) %duong cong
+	disp('ko co tiep tuyen tai x=0')
+
+4. 	syms x
+	limit((x-1)/log(x),x,1,'right')
+	limit((1-x)^2+(x+1)/2,x,1,'left')
+	hold all
+	ezplot((x-1)/log(x),[1,2])		
+	zplot((1-x)^2+(x+1)/2,[0,1])
+	k=syms x; subs(diff((1-x)^2+(x+1)/2),1)
+	ezplot(k*(x-1)+subs((1-x)^2+(x+1)/2,1),[0,2]) %TIEP TUYEN
+
+
+DANG 4.4
+1. syms a b x
+ f=sin(a*x^2)/2+(1+a*x)^(1/a)-exp(x)
+taylor(f,4)
+ solve(a^2/3-a/2-3/2)
+ 
+DANG 4.6 KHONG HIEU RO??
+1.	syms x
+	f=(2*x-1)/(2*x^3+x^2-8*x+5)
+	[t m]=numden(f)
+	t= sym2poly(t)
+	m=sym2poly(m)	
+	[m n p]= residue(t,m)	
+	solve((x-m(1))*(x-m(2))*(x-m(3)))
+2.	syms x
+	F=(3*x^2-2)/(x^3+2*x^2-2*x+3)
+	[t m]= numden(f)
+	t= sym2poly(t)
+	m=sym2poly(m)	
+	[m n p]= residue(t,m)
+	solve(x-m(1))
+	m(2)*(x-n(3))+m(3)*(x-n(2))
+	simplify(ans)
+	(x-n(2))*(x-n(3))
+	simplify(ans)
+3.	syms x
+	f=(x^4-2)/(2*x^3+x^2-8*x+5)
+	[t m]= numden(f)
+	t=sym2poly(t)
+	m=sym2poly(m)	
+	[m n p]= residue(t,m)
+	solve((x-m(1))*(x-m(2))*(x-m(3)))
+4.	syms x
+	f=(x+1)/(x^4+5*x^2-36)
+	[t m]= numden(f)
+	t= sym2poly(t)
+	m=sym2poly(m)	
+	[m n p]= residue(t,m)
+	solve((x-m(3))*(x-m(4)))
+	m(1)*(x-n(2))+m(2)*(x-n(1))
+	(x-n(1))*(x-n(2))
+DANG 4.7
+1.	syms  x t
+	ezplot(t,4+0*t,[-5,5])
+	ezplot(x^2,[-3,3])
+	axis square		
+	solve(x^2-4)
+	int(abs(x^2-4),-2,2)
+2.	syms  x t
+	ezplot(x^2-2*x,[0,6])
+	hold on;
+	ezplot(t,3+0*t,[0,6])
+	solve(x^2-2*x-3)
+	int(abs(x^2-2*x-3),0,3)
+3.	syms x
+	ezplot(9*log(x)/x,0,10); hold on
+	ezplot(x*log(x),0,10)
+	solve((9*log(x))/x-x*log(x))
+	int(abs(9*log(x)/x-x*log(x)),0,3)
+DANG 4.8
+1.	syms x;
+>> f=exp(x)*sqrt(1-x)
+g=sqrt(1-x)
+a=solve(f-g)
+vox=pi*abs(int(f^2-g^2,x,a(1,1),a(2,1)))
+
+2.	syms x t
+	hold all
+	ezplot(x^2)
+	ezplot(t,0+0*t)
+	ezplot(2-x)
+	2*pi*int(abs(x*(x^2-2+x)),0,2)
+3.	syms x t
+	hold all
+	ezplot(2*x-x^2,0,3)
+	ezplot(t,3+0*t,[0,3])
+	%hai do thi khong cat nhau nen khong tinh dc the tich
+4.	
+
+
+DANG 4.9 
+1.	syms x real
+	f=sqrt(1+x^2)
+	ezplot(f,[0,1])
+	dien_tich= 2*pi*double(int(abs(f)*sqrt(1+diff(f)^2),0,1))
+2. 	syms x
+	f=(sqrt(x)*(x-12))/6
+	ezplot(f,[0,12])
+	dien_tich=2*pi*double(int(abs(f)*sqrt(1+diff(f)^2),0,1)).
+DANG 5.1
+1. syms x; syms t;
+f=x^3/(2*(x^2+1))
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0)
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+3. syms x; syms t;
+f=(2*x-1)*exp(2/x)
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0,'right')
+limit(f,x,0,'left')
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+2. syms x; syms t;
+f=x^3/sqrt(x^4+1)
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0,'right')
+limit(f,x,0,'left')
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+4. syms x; syms t;
+f=exp(1/x)-x
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0,'right')
+limit(f,x,0,'left')
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+5. syms x; syms t;
+f=x^2/sqrt(1+x^2)
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0,'right')
+limit(f,x,0,'left')
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+7.
+syms x; syms t;
+f=(2*x-1)*exp(1/x)
+limit(f,x,inf)
+limit(f,x,-inf)
+limit(f,x,0,'right')
+limit(f,x,0,'left')
+a=limit(f/x,x,inf)
+b=limit(f-a*x,x,inf)
+ezplot(f,[-10,10])
+hold on
+ezplot(a*x+b,[-10,10])
+grid on
+ezplot(0*t,t,[-2 0])
+DANG 5.2
+1.	f=(exp(x)-1)/x
+	g=x/2
+	limit((f-subs(g,0))/(x-0),x,0,'right')
+	limit((g-subs(g,0))/(x-0),x,0,'left')
+	ezplot(f,[0,10])
+	hold on
+	ezplot(g,[-10,0])
+	plot(0,subs(g,0),'*')
+	y=1/2*x
+	ezplot(y,[-10,50])
+2.	syms x;
+f=exp(1/x)
+g=x^2+1
+dhp=limit((f-subs(f,x,0))/x,x,0,'right')
+dht=limit((g-subs(f,x,0))/x,x,0,'left')
+tp=subs(dhp,x,0)*x+subs(f,x,0)
+tt=subs(dht,x,0)*x+subs(g,x,0)
+ezplot(f,[0,10])
+hold on
+ezplot(g,[-10,0])
+hold on
+ezplot(tp,[0,10])
+hold on
+ezplot(tt,[-10,0]);
+y=0;
+hold on 
+ezplot(0*x,[-50,50])
+3.	f=(x-1)/log(x)
+	g=(1-x)^2
+	limit((f-subs(g,1))/(x-1),x,1,'right')
+	limit((g-subs(g,1))/(x-1),x,1,'left')
+	ezplot(f,[1,10])
+	hold on
+	ezplot(g,[-10,1])
+	plot(1,subs(g,1),'*')
+	y=0
+	ezplot(0*x,[-10,10])
+
+
+
