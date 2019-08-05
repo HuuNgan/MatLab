@@ -1,1 +1,1 @@
-	dsolve('Dy-y*tanx+y^2*cosx=0','x')
+	dsolve('Dy-y*tan(x)+y^2*cos(x)=0','x')

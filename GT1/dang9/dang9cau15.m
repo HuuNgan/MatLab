@@ -1,2 +1,2 @@
-  	dsolve('x*Dy+y=(y^2)*lnx','y(1)=1','x')
+  	dsolve('x*Dy+y=(y^2)*log(x)','y(1)=1','x')
 

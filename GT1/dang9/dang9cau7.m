@@ -1,1 +1,1 @@
-	dsolve('Dy-y*cotx=sinx','x')	
+	dsolve('Dy-y*cot(x)=sin(x)','x')	
