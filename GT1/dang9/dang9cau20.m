@@ -1,0 +1,1 @@
+  	dsolve('5*D2y-6*Dy+5*y=x*exp(x)','x')
